@@ -54,27 +54,21 @@ public class DriverProgram {
         while (choice != 12) {
             switch (choice) {
             case 1 -> {
-                    System.out.println("Insert data for add before: ");
-                    
+                    System.out.print("Insert data for add before: ");
                     userInput.nextLine();
                     var nodeData = userInput.nextLine(); // getiing node data from user
                     ListNode2Way nodeToAdd = new ListNode2Way(nodeData); //creating ListNode2Way with inserted data
-                    
                     ll.addBefore(nodeToAdd); // adding new node with addBefore
-                    
                     ll.printForward(); //printing to check if it's added correctly or not
                     menu();
                     choice = userInput.nextInt();
                 }
                 case 2 -> {
                     System.out.println("Insert data for add after: ");
-                    
                     userInput.nextLine();
                     var nodeData = userInput.nextLine(); // getiing node data from user
                     ListNode2Way nodeToAdd = new ListNode2Way(nodeData); //creating ListNode with inserted data
-                    
                     ll.addAfter(nodeToAdd); // adding new node with addBefore
-                    
                     ll.printForward(); //printing to check if it's added correctly or not
                     menu();
                     choice = userInput.nextInt();
@@ -98,7 +92,6 @@ public class DriverProgram {
                 }
                 case 6 -> {
                     ll.advance();
-                    
                     System.out.println("=======================================");
                     System.out.println("The data of current is " + ll.getCurrent().toString());
                     System.out.println("=======================================");
@@ -107,7 +100,6 @@ public class DriverProgram {
                 }
                 case 7 -> {
                     ll.previous();
-                    
                     System.out.println("=======================================");
                     System.out.println("The data of current is " + ll.getCurrent().toString());
                     System.out.println("=======================================");
@@ -122,7 +114,6 @@ public class DriverProgram {
                 }
                 case 9 -> {
                     ll.start();
-                    
                     System.out.println("=======================================");
                     System.out.println("The data of current is " + ll.getCurrent().toString());
                     System.out.println("=======================================");
